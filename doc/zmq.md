@@ -66,7 +66,7 @@ address. The same address can be used in more than one notification.
 
 For instance:
 
-    $ polisd -zmqpubhashtx=tcp://127.0.0.1:28332 \
+    $ polisd -zmqpubhashtx=tcp://127.0.0.1:224217 \
                -zmqpubrawtx=ipc:///tmp/polisd.tx.raw
 
 Each PUB notification has a topic and body, where the header

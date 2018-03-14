@@ -18,7 +18,7 @@ class ZMQTest (PolisTestFramework):
         super().__init__()
         self.num_nodes = 4
 
-    port = 28332
+    port = 224217
 
     def setup_nodes(self):
         self.zmqContext = zmq.Context()
