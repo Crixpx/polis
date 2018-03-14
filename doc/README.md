@@ -1,40 +1,43 @@
+Bitcoin Core
+=============
 
+Setup
+---------------------
+Bitcoin Core is the original Bitcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Bitcoin transactions (which is currently more than 100 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-Polis Core 1.2.2
-=====================
-
-This is the official reference wallet for polis digital currency and comprises the backbone of the polis peer-to-peer network. You can [download polis Core](https://www.polis.org/downloads/) or [build it yourself](#building) using the guides below.
+To download Bitcoin Core, visit [bitcoincore.org](https://bitcoincore.org/en/releases/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run polis on your native platform.
+The following are some helpful notes on how to run Bitcoin on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/polis-qt` (GUI) or
-- `bin/polisd` (headless)
+- `bin/bitcoin-qt` (GUI) or
+- `bin/bitcoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run polis-qt.exe.
+Unpack the files into a directory, and then run bitcoin-qt.exe.
 
 ### OS X
 
-Drag polis-Qt to your applications folder, and then run polis-Qt.
+Drag Bitcoin-Core to your applications folder, and then run Bitcoin-Core.
 
 ### Need Help?
 
-* See the [polis documentation](https://polispay.atlassian.net/wiki/display/DOC)
+* See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on [Polispay Discord](https://discord.gg/gwhHv8U)
-* Ask for help on the [Polis Forum](https://polispay.org/forum)
+* Ask for help on [#bitcoin](http://webchat.freenode.net?channels=bitcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=bitcoin).
+* Ask for help on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Technical Support board](https://bitcointalk.org/index.php?board=4.0).
 
 Building
 ---------------------
-The following are developer notes on how to build polis Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Bitcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
+- [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 - [Windows Build Notes](build-windows.md)
@@ -43,12 +46,12 @@ The following are developer notes on how to build polis Core on your native plat
 
 Development
 ---------------------
-The polis Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Bitcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- Source Code Documentation ***TODO***
+- [Source Code Documentation (External Link)](https://dev.visucore.com/bitcoin/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)
@@ -59,12 +62,14 @@ The polis Core repo's [root README](/README.md) contains relevant information on
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [Polis  Forum](https://polispay.org/forum), in the Development & Technical Discussion board.
-* Discuss on [Polis Discord](https://discord.gg/gwhHv8U)
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Development & Technical Discussion board](https://bitcointalk.org/index.php?board=6.0).
+* Discuss project-specific development on #bitcoin-core-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=bitcoin-core-dev).
+* Discuss general Bitcoin development on #bitcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=bitcoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
 - [Files](files.md)
+- [Fuzz-testing](fuzzing.md)
 - [Reduce Traffic](reduce-traffic.md)
 - [Tor Support](tor.md)
 - [Init Scripts (systemd/upstart/openrc)](init.md)

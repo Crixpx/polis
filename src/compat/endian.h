@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,12 +6,12 @@
 #define BITCOIN_COMPAT_ENDIAN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/polis-config.h"
+#include <config/bitcoin-config.h>
 #endif
 
-#include <stdint.h>
+#include <compat/byteswap.h>
 
-#include "compat/byteswap.h"
+#include <stdint.h>
 
 #if defined(HAVE_ENDIAN_H)
 #include <endian.h>
@@ -108,10 +108,10 @@ inline uint64_t le64toh(uint64_t little_endian_64bits)
 #else // WORDS_BIGENDIAN
 
 #if HAVE_DECL_HTOBE16 == 0
-/*inline uint16_t htobe16(uint16_t host_16bits)
+inline uint16_t htobe16(uint16_t host_16bits)
 {
     return bswap_16(host_16bits);
-} */
+}
 #endif // HAVE_DECL_HTOBE16
 
 #if HAVE_DECL_HTOLE16 == 0

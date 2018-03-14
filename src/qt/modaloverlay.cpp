@@ -1,13 +1,13 @@
-// Copyright (c) 2016 The Bitcoin Core developers
+// Copyright (c) 2016-2017 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "modaloverlay.h"
-#include "ui_modaloverlay.h"
+#include <qt/modaloverlay.h>
+#include <qt/forms/ui_modaloverlay.h>
 
-#include "guiutil.h"
+#include <qt/guiutil.h>
 
-#include "chainparams.h"
+#include <chainparams.h>
 
 #include <QResizeEvent>
 #include <QPropertyAnimation>
@@ -18,8 +18,7 @@ ui(new Ui::ModalOverlay),
 bestHeaderHeight(0),
 bestHeaderDate(QDateTime()),
 layerIsVisible(false),
-userClosed(false),
-foreverHidden(false)
+userClosed(false)
 {
     ui->setupUi(this);
     connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(closeClicked()));
@@ -129,7 +128,7 @@ void ModalOverlay::tipUpdate(int count, const QDateTime& blockDate, double nVeri
         return;
 
     // estimate the number of headers left based on nPowTargetSpacing
-    // and check if the gui is not aware of the the best header (happens rarely)
+    // and check if the gui is not aware of the best header (happens rarely)
     int estimateNumHeadersLeft = bestHeaderDate.secsTo(currentDate) / Params().GetConsensus().nPowTargetSpacing;
     bool hasBestHeader = bestHeaderHeight >= count;
 
@@ -154,9 +153,6 @@ void ModalOverlay::showHide(bool hide, bool userRequested)
     if ( (layerIsVisible && !hide) || (!layerIsVisible && hide) || (!hide && userClosed && !userRequested))
         return;
 
-    if (!hide && foreverHidden)
-        return;
-
     if (!isVisible() && !hide)
         setVisible(true);
 
@@ -175,9 +171,4 @@ void ModalOverlay::closeClicked()
 {
     showHide(true);
     userClosed = true;
-}
-
-void ModalOverlay::hideForever()
-{
-    foreverHidden = true;
 }
