@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2014-2016 The Polis Core developers
 # Copyright (c) 2014-2017 The Polis Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -113,7 +113,7 @@ def rpc_port(n):
     return PORT_MIN + PORT_RANGE + n + (MAX_NODES * PortSeed.n) % (PORT_RANGE - 1 - MAX_NODES)
 
 def check_json_precision():
-    """Make sure json library being used does not lose precision converting BTC values"""
+    """Make sure json library being used does not lose precision converting POLIS values"""
     n = Decimal("20000000.00000003")
     satoshis = int(json.loads(json.dumps(float(n)))*1.0e8)
     if satoshis != 2000000000000003:
@@ -189,7 +189,7 @@ def sync_masternodes(rpc_connections):
     for node in rpc_connections:
         wait_to_sync(node)
 
-bitcoind_processes = {}
+polisd_processes = {}
 
 def initialize_datadir(dirname, n):
     datadir = os.path.join(dirname, "node"+str(n))
@@ -222,7 +222,7 @@ def rpc_url(i, rpchost=None):
             host = rpchost
     return "http://%s:%s@%s:%d" % (rpc_u, rpc_p, host, int(port))
 
-def wait_for_bitcoind_start(process, url, i):
+def wait_for_polisd_start(process, url, i):
     '''
     Wait for polisd to start. This means that RPC is accessible and fully initialized.
     Raise an exception if polisd exits during initialization.
@@ -273,12 +273,12 @@ def initialize_chain(test_dir, num_nodes, cachedir, extra_args=None, redirect_st
             stderr = None
             if redirect_stderr:
                 stderr = sys.stdout
-            bitcoind_processes[i] = subprocess.Popen(args, stderr=stderr)
+            polisd_processes[i] = subprocess.Popen(args, stderr=stderr)
             if os.getenv("PYTHON_DEBUG", ""):
 
                 print("initialize_chain: polisd started, waiting for RPC to come up")
 
-            wait_for_bitcoind_start(bitcoind_processes[i], rpc_url(i), i)
+            wait_for_polisd_start(polisd_processes[i], rpc_url(i), i)
             if os.getenv("PYTHON_DEBUG", ""):
                 print("initialize_chain: RPC successfully started")
 
@@ -371,13 +371,13 @@ def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=
     if redirect_stderr:
         stderr = sys.stdout
 
-    bitcoind_processes[i] = subprocess.Popen(args, stderr=stderr)
+    polisd_processes[i] = subprocess.Popen(args, stderr=stderr)
     if os.getenv("PYTHON_DEBUG", ""):
 
         print("start_node: polisd started, waiting for RPC to come up")
 
     url = rpc_url(i, rpchost)
-    wait_for_bitcoind_start(bitcoind_processes[i], url, i)
+    wait_for_polisd_start(polisd_processes[i], url, i)
     if os.getenv("PYTHON_DEBUG", ""):
         print("start_node: RPC successfully started")
     proxy = get_rpc_proxy(url, i, timeout=timewait)
@@ -410,14 +410,14 @@ def stop_node(node, i):
         node.stop()
     except http.client.CannotSendRequest as e:
         print("WARN: Unable to stop node: " + repr(e))
-    return_code = bitcoind_processes[i].wait(timeout=BITCOIND_PROC_WAIT_TIMEOUT)
+    return_code = polisd_processes[i].wait(timeout=BITCOIND_PROC_WAIT_TIMEOUT)
     assert_equal(return_code, 0)
-    del bitcoind_processes[i]
+    del polisd_processes[i]
 
 def stop_nodes(nodes):
     for i, node in enumerate(nodes):
         stop_node(node, i)
-    assert not bitcoind_processes.values() # All connections must be gone now
+    assert not polisd_processes.values() # All connections must be gone now
 
 def set_node_times(nodes, t):
     for node in nodes:

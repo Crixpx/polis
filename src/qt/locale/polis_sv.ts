@@ -217,7 +217,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>PolisGUI</name>
     <message>
         <source>polis Core</source>
         <translation>polis Core
@@ -2136,8 +2136,8 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core-utvecklarna</translation>
+        <source>The Polis Core developers</source>
+        <translation>Polis Core-utvecklarna</translation>
     </message>
     <message>
         <source>The polis Core developers</source>
@@ -3066,8 +3066,8 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Lösenord för JSON-RPC-anslutningar</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>RPC SSL-alternativ: (Se Bitcoin Wiki för SSL-inställningsinstruktioner)</translation>
+        <source>RPC SSL options: (see the Polis Wiki for SSL setup instructions)</source>
+        <translation>RPC SSL-alternativ: (Se Polis Wiki för SSL-inställningsinstruktioner)</translation>
     </message>
     <message>
         <source>RPC server options:</source>

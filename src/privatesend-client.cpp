@@ -1277,7 +1277,7 @@ bool CPrivateSendClient::CreateDenominated(const CompactTallyItem& tallyItem, bo
     CAmount nValueLeft = tallyItem.nAmount;
     nValueLeft -= CPrivateSend::GetCollateralAmount(); // leave some room for fees
 
-    LogPrintf("CreateDenominated0: %s nValueLeft: %f\n", CBitcoinAddress(tallyItem.txdest).ToString(), (float)nValueLeft/COIN);
+    LogPrintf("CreateDenominated0: %s nValueLeft: %f\n", CPolisAddress(tallyItem.txdest).ToString(), (float)nValueLeft/COIN);
 
     // ****** Add an output for mixing collaterals ************ /
 

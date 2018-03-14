@@ -96,7 +96,7 @@ public:
          nAmount(0)
     {}
 
-    CGovernancePayment(CBitcoinAddress addrIn, CAmount nAmountIn)
+    CGovernancePayment(CPolisAddress addrIn, CAmount nAmountIn)
         :fValid(false),
          script(),
          nAmount(0)

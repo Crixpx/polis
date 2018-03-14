@@ -1,10 +1,10 @@
 0.11.0 Release notes
 ====================
 
-Darkcoin Core 0.11.0 is forked off the Bitcoin Core 0.9.3. The old darkcoin
+Darkcoin Core 0.11.0 is forked off the Polis Core 0.9.3. The old darkcoin
 versions 0.10.x were forked from the Litecoin 0.8 tree. The following changes
 are introduced in this major release. This list is compiled from the release
-notes of Bitcoin Core  0.9.0, 0.9.1, 0.9.2, 0.9.2.1, 0.9.3 and was completed
+notes of Polis Core  0.9.0, 0.9.1, 0.9.2, 0.9.2.1, 0.9.3 and was completed
 with the introduced changes to the Darkcoin Core 0.11.0.
 
 

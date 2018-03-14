@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Copyright 2014 BitPay Inc.
-# Copyright 2016 The Bitcoin Core developers
+# Copyright 2016 The Polis Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 from __future__ import division,print_function,unicode_literals
@@ -10,13 +10,13 @@ import buildenv
 import argparse
 import logging
 
-help_text="""Test framework for bitcoin utils.
+help_text="""Test framework for polis utils.
 
 Runs automatically during `make check`.
 
 Can also be run manually from the src directory by specifying the source directory:
 
-test/bitcoin-util-test.py --srcdir='srcdir' [--verbose]
+test/polis-util-test.py --srcdir='srcdir' [--verbose]
 """
 
 if __name__ == '__main__':
@@ -42,4 +42,4 @@ if __name__ == '__main__':
     # Add the format/level to the logger
     logging.basicConfig(format = formatter, level=level)
 
-    bctest.bctester(srcdir + "/test/data", "bitcoin-util-test.json", buildenv)
+    bctest.bctester(srcdir + "/test/data", "polis-util-test.json", buildenv)

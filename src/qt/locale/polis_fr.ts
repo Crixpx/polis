@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>PolisGUI</name>
     <message>
         <source>A fatal error occurred. polis Core can no longer continue safely and will quit.</source>
         <translation>Une erreur fatale est survenue. polis ne peut plus continuer de façon sûre et va s'arrêter.</translation>
@@ -3187,8 +3187,8 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Les développeurs Bitcoin Core</translation>
+        <source>The Polis Core developers</source>
+        <translation>Les développeurs Polis Core</translation>
     </message>
     <message>
         <source>The polis Core developers</source>
@@ -4141,8 +4141,8 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Connecter à KeePassHttp sur le port &lt;port&gt; (par défaut: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Polis Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Polis Core Developers</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The polis Core Developers</source>

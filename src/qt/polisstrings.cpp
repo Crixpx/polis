@@ -1,4 +1,4 @@
-// Copyright (c) 2013-2015 The Bitcoin Core developers
+// Copyright (c) 2013-2015 The Polis Core developers
 // Copyright (c) 2014-2017 The Polis Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -335,7 +335,7 @@ QT_TRANSLATE_NOOP("polis-core", "Connect through SOCKS5 proxy"),
 QT_TRANSLATE_NOOP("polis-core", "Connect to KeePassHttp on port <port> (default: %u)"),
 QT_TRANSLATE_NOOP("polis-core", "Connect to a node to retrieve peer addresses, and disconnect"),
 QT_TRANSLATE_NOOP("polis-core", "Connection options:"),
-QT_TRANSLATE_NOOP("polis-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
+QT_TRANSLATE_NOOP("polis-core", "Copyright (C) 2009-%i The Polis Core Developers"),
 QT_TRANSLATE_NOOP("polis-core", "Copyright (C) 2014-%i The Polis Core Developers"),
 QT_TRANSLATE_NOOP("polis-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("polis-core", "Could not parse masternode.conf"),

@@ -48,11 +48,11 @@ Per-UTXO fix
 This fixes a potential vulnerability, so called 'Corebleed', which was
 demonstrated this summer at the Вrеаkіng Віtсоіn Соnfеrеnсе іn Раrіs. The DoS
 can cause nodes to allocate excessive amounts of memory, which leads them to a
-halt. You can read more about the fix in the original Bitcoin Core pull request
-https://github.com/bitcoin/bitcoin/pull/10195
+halt. You can read more about the fix in the original Polis Core pull request
+https://github.com/polispay/polis/pull/10195
 
 To fix this issue in Dash Core however, we had to backport a lot of other
-improvements from Bitcoin Core, see full list of backports in the detailed
+improvements from Polis Core, see full list of backports in the detailed
 change log below.
 
 Additional indexes fix
@@ -128,7 +128,7 @@ See detailed [change log](https://github.com/dashpay/dash/compare/v0.12.2.1...da
 - [`09b3e042f`](https://github.com/dashpay/dash/commit/09b3e042f) Backport #9310: Assert FRESH validity in CCoinsViewCache::BatchWrite
 - [`ceb64fcd4`](https://github.com/dashpay/dash/commit/ceb64fcd4) Backport #8610: Share unused mempool memory with coincache
 - [`817ecc03d`](https://github.com/dashpay/dash/commit/817ecc03d) Backport #9353: Add data() method to CDataStream (and use it)
-- [`249db2776`](https://github.com/dashpay/dash/commit/249db2776) Backport #9999: [LevelDB] Plug leveldb logs to bitcoin logs
+- [`249db2776`](https://github.com/dashpay/dash/commit/249db2776) Backport #9999: [LevelDB] Plug leveldb logs to polis logs
 - [`cfefd34f4`](https://github.com/dashpay/dash/commit/cfefd34f4) Backport #10126: Compensate for memory peak at flush time
 - [`ff9b2967a`](https://github.com/dashpay/dash/commit/ff9b2967a) Backport #10133: Clean up calculations of pcoinsTip memory usage
 - [`567043d36`](https://github.com/dashpay/dash/commit/567043d36) Make DisconnectBlock and ConnectBlock static in validation.cpp
@@ -221,7 +221,7 @@ Thanks to everyone who directly contributed to this release:
 - UdjinM6
 - Will Wray
 
-As well as Bitcoin Core Developers and everyone that submitted issues,
+As well as Polis Core Developers and everyone that submitted issues,
 reviewed pull requests or helped translating on
 [Transifex](https://www.transifex.com/projects/p/dash/).
 
@@ -240,12 +240,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Dash Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Dash Core tree 0.11.x was a fork of Polis Core tree 0.9,
 Darkcoin was rebranded to Dash.
 
-Dash Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Dash Core tree 0.12.0.x was a fork of Polis Core tree 0.10.
 
-Dash Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Dash Core tree 0.12.1.x was a fork of Polis Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 

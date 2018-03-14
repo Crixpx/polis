@@ -277,7 +277,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int nBlockH
 
     CTxDestination address1;
     ExtractDestination(payee, address1);
-    CBitcoinAddress address2(address1);
+    CPolisAddress address2(address1);
 
     LogPrintf("CMasternodePayments::FillBlockPayee -- Masternode payment %lld to %s\n", masternodePayment, address2.ToString());
 }
@@ -394,7 +394,7 @@ void CMasternodePayments::ProcessMessage(CNode* pfrom, const std::string& strCom
 
         CTxDestination address1;
         ExtractDestination(vote.payee, address1);
-        CBitcoinAddress address2(address1);
+        CPolisAddress address2(address1);
 
         LogPrint("mnpayments", "MASTERNODEPAYMENTVOTE -- vote: address=%s, nBlockHeight=%d, nHeight=%d, prevout=%s, hash=%s new\n",
                     address2.ToString(), vote.nBlockHeight, nCachedBlockHeight, vote.masternodeOutpoint.ToStringShort(), nHash.ToString());
@@ -596,7 +596,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew) const
 
             CTxDestination address1;
             ExtractDestination(payee.GetPayee(), address1);
-            CBitcoinAddress address2(address1);
+            CPolisAddress address2(address1);
 
             if(strPayeesPossible == "") {
                 strPayeesPossible = address2.ToString();
@@ -620,7 +620,7 @@ std::string CMasternodeBlockPayees::GetRequiredPaymentsString() const
     {
         CTxDestination address1;
         ExtractDestination(payee.GetPayee(), address1);
-        CBitcoinAddress address2(address1);
+        CPolisAddress address2(address1);
 
         if (!strRequiredPayments.empty())
             strRequiredPayments += ", ";
@@ -776,7 +776,7 @@ bool CMasternodePayments::ProcessBlock(int nBlockHeight, CConnman& connman)
 
     CTxDestination address1;
     ExtractDestination(payee, address1);
-    CBitcoinAddress address2(address1);
+    CPolisAddress address2(address1);
 
     LogPrintf("CMasternodePayments::ProcessBlock -- vote: payee=%s, nBlockHeight=%d\n", address2.ToString(), nBlockHeight);
 
@@ -838,7 +838,7 @@ void CMasternodePayments::CheckBlockVotes(int nBlockHeight)
         if (found) {
             CTxDestination address1;
             ExtractDestination(payee, address1);
-            CBitcoinAddress address2(address1);
+            CPolisAddress address2(address1);
 
             debugStr += strprintf("    - %s - voted for %s\n",
                                   mn.second.outpoint.ToStringShort(), address2.ToString());
@@ -1018,7 +1018,7 @@ void CMasternodePayments::RequestLowDataPaymentBlocks(CNode* pnode, CConnman& co
             for (const auto& payee : it->second.vecPayees) {
                 CTxDestination address1;
                 ExtractDestination(payee.GetPayee(), address1);
-                CBitcoinAddress address2(address1);
+                CPolisAddress address2(address1);
                 printf("payee %s votes %d\n", address2.ToString().c_str(), payee.GetVoteCount());
             }
             printf("block %d votes total %d\n", it->first, nTotalVotes);

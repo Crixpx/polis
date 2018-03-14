@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2014-2016 The Polis Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +29,7 @@ from .util import (
 from .authproxy import JSONRPCException
 
 
-class BitcoinTestFramework(object):
+class PolisTestFramework(object):
 
     def __init__(self):
         self.num_nodes = 4
@@ -190,13 +190,13 @@ class BitcoinTestFramework(object):
             sys.exit(1)
 
 
-# Test framework for doing p2p comparison testing, which sets up some bitcoind
+# Test framework for doing p2p comparison testing, which sets up some polisd
 # binaries:
 # 1 binary: test binary
 # 2 binaries: 1 test binary, 1 ref binary
 # n>2 binaries: 1 test binary, n-1 ref binaries
 
-class ComparisonTestFramework(BitcoinTestFramework):
+class ComparisonTestFramework(PolisTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -206,10 +206,10 @@ class ComparisonTestFramework(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
                           default=os.getenv("polisD", "polisd"),
-                          help="bitcoind binary to test")
+                          help="polisd binary to test")
         parser.add_option("--refbinary", dest="refbinary",
                           default=os.getenv("polisD", "polisd"),
-                          help="bitcoind binary to use for reference nodes (if any)")
+                          help="polisd binary to use for reference nodes (if any)")
 
     def setup_network(self):
         self.nodes = start_nodes(

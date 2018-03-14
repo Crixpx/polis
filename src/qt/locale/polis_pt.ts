@@ -229,7 +229,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>PolisGUI</name>
     <message>
         <source>polis Core</source>
         <translation>polis Core</translation>
@@ -2728,8 +2728,8 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Versão %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Os programadores Bitcoin Core</translation>
+        <source>The Polis Core developers</source>
+        <translation>Os programadores Polis Core</translation>
     </message>
     <message>
         <source>The polis Core developers</source>
@@ -3692,8 +3692,8 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Conectar a KeePassHttp na porta &lt;port&gt; (default: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Polis Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Polis Core Developers</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The polis Core Developers</source>
@@ -4184,7 +4184,7 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>Palavra-passe para as ligações JSON-RPC</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <source>RPC SSL options: (see the Polis Wiki for SSL setup instructions)</source>
         <translation>Opções RPC SSL: (para instruções de configuração SSL dirija-se à polis Wiki)</translation>
     </message>
     <message>

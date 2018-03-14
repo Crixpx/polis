@@ -307,14 +307,14 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>PolisGUI</name>
     <message>
         <location filename="../polis.cpp" line="+542"/>
         <source>A fatal error occurred. polis Core can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. polis Core can no longer continue safely and will quit.</translation>
     </message>
     <message>
-        <location filename="../bitcoingui.cpp" line="+130"/>
+        <location filename="../polisgui.cpp" line="+130"/>
         <location line="+988"/>
         <source>polis Core</source>
         <translation>polis Core</translation>
@@ -2559,7 +2559,7 @@ https://www.transifex.com/projects/p/polis/</translation>
         <translation>polis Core didn&apos;t yet exit safely...</translation>
     </message>
     <message>
-        <location filename="../bitcoinunits.cpp" line="+233"/>
+        <location filename="../polisunits.cpp" line="+233"/>
         <source>Amount</source>
         <translation>Amount</translation>
     </message>
@@ -4133,8 +4133,8 @@ https://www.transifex.com/projects/p/polis/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
+        <source>The Polis Core developers</source>
+        <translation>The Polis Core developers</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4817,7 +4817,7 @@ https://www.transifex.com/projects/p/polis/</translation>
 <context>
     <name>UnitDisplayStatusBarControl</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+138"/>
+        <location filename="../polisgui.cpp" line="+138"/>
         <source>Unit to show amounts in. Click to select another unit.</source>
         <translation>Unit to show amounts in. Click to select another unit.</translation>
     </message>
@@ -5349,8 +5349,8 @@ https://www.transifex.com/projects/p/polis/</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Polis Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Polis Core Developers</translation>
     </message>
     <message>
         <location line="+1"/>

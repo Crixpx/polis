@@ -403,7 +403,7 @@ http://test.explorer.darkcoin.fr/tx/ce0ea2bdf630233955d459489b6f764e0d0bbe9e8a62
   I don't want it holding up the release. Plus it's really
   the only issue we're experiencing
 - Merged rebroad's (https://github.com/rebroad) changes to bring debugging
-  output more in line with the bitcoin project. Output is now much cleaner and
+  output more in line with the polis project. Output is now much cleaner and
   can be split by category.
 - Removed some debug messages
 - Merged mac/windows build icons

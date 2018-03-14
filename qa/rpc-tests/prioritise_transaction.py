@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2016 The Bitcoin Core developers
+# Copyright (c) 2015-2016 The Polis Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,11 +7,11 @@
 # Test PrioritiseTransaction code
 #
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import PolisTestFramework
 from test_framework.util import *
 from test_framework.mininode import COIN, MAX_BLOCK_SIZE
 
-class PrioritiseTransactionTest(BitcoinTestFramework):
+class PrioritiseTransactionTest(PolisTestFramework):
 
     def __init__(self):
         super().__init__()
@@ -25,8 +25,8 @@ class PrioritiseTransactionTest(BitcoinTestFramework):
         self.is_network_split = False
 
         self.nodes.append(start_node(0, self.options.tmpdir, ["-debug", "-printpriority=1"]))
-        self.nodes.append(start_node(1, self.options.tmpdir, ["-debug", "-printpriority=1"])) # TODO move this to extra_args when Bitcoin #10198 gets backported
-        connect_nodes(self.nodes[0], 1) # TODO remove this when Bitcoin #10198 gets backported
+        self.nodes.append(start_node(1, self.options.tmpdir, ["-debug", "-printpriority=1"])) # TODO move this to extra_args when Polis #10198 gets backported
+        connect_nodes(self.nodes[0], 1) # TODO remove this when Polis #10198 gets backported
         self.relayfee = self.nodes[0].getnetworkinfo()['relayfee']
 
     def run_test(self):

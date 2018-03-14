@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>PolisGUI</name>
     <message>
         <source>A fatal error occurred. polis Core can no longer continue safely and will quit.</source>
         <translation>Ein kritischer Fehler ist aufgetreten. polis Core kann nicht mehr ausgeführt werden und wird nun beendet.</translation>
@@ -3190,8 +3190,8 @@ Dies kann passieren, wenn einige polis aus ihrer Wallet bereits ausgegeben wurde
         <translation>Version %1</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Die "Bitcoin Core"-Entwickler</translation>
+        <source>The Polis Core developers</source>
+        <translation>Die "Polis Core"-Entwickler</translation>
     </message>
     <message>
         <source>The polis Core developers</source>
@@ -4144,8 +4144,8 @@ Dies kann passieren, wenn einige polis aus ihrer Wallet bereits ausgegeben wurde
         <translation>Mit KeePassHttp auf &lt;port&gt; verbinden (Standard: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Die "Bitcoin Core"-Entwickler</translation>
+        <source>Copyright (C) 2009-%i The Polis Core Developers</source>
+        <translation>Copyright (C) 2009-%i Die "Polis Core"-Entwickler</translation>
     </message>
     <message>
         <source>Copyright (C) 2014-%i The polis Core Developers</source>

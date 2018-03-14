@@ -50,7 +50,7 @@ This does not affect wallet forward or backward compatibility.
 0.12.0 changelog
 ----------------
 
-Switched to Bitcoin Core version 0.10 - https://bitcoin.org/en/release/v0.10.0
+Switched to Polis Core version 0.10 - https://polis.org/en/release/v0.10.0
 - Implemented decentralized budget system 
 - Removed reference node
 - Implemented new decentralized masternode payment consensus system

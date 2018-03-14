@@ -53,9 +53,9 @@ Backward compatibility with current mining software is NOT provided, thus
 miners should read the first paragraph of "Mining and relay policy
 enhancements" above.
 
-Also compare with [upstream release notes](https://github.com/bitcoin/bitcoin/blob/0.10/doc/release-notes.md#mining-and-relay-policy-enhancements).
+Also compare with [upstream release notes](https://github.com/polispay/polis/blob/0.10/doc/release-notes.md#mining-and-relay-policy-enhancements).
 
-More info on [BIP 66](https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki).
+More info on [BIP 66](https://github.com/polis/bips/blob/master/bip-0066.mediawiki).
 
 
 How to Upgrade
@@ -106,5 +106,5 @@ Thanks to who contributed to this release, at least:
 - morcos
 - 21E14
 
-As well as the Bitcoin Core developers and everyone that helped translating on
+As well as the Polis Core developers and everyone that helped translating on
 [Transifex](https://www.transifex.com/projects/p/darkcoin/).
